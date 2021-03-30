@@ -427,7 +427,7 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButtonPointActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPointActionPerformed
-        String EnterNumber = txtDisplay.getText() + jButtonPoint.getText();
+        String EnterNumber = txtDisplay.getText();
         if(EnterNumber.contains(".")) return;
         
         EnterNumber = txtDisplay.getText() + jButtonPoint.getText();
