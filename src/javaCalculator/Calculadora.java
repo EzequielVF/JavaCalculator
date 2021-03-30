@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package javaCalculator;
-
+import java.awt.Image;
+import java.awt.Toolkit;
+import javax.imageio.ImageIO;
 /**
  *
  * @author Vilardo
@@ -61,6 +63,14 @@ public class Calculadora extends javax.swing.JFrame {
         jButtonFactorial = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Calculadora");
+        setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("calculadora.png")));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowIconified(java.awt.event.WindowEvent evt) {
+                formWindowIconified(evt);
+            }
+        });
 
         txtDisplay.setFont(new java.awt.Font("Berlin Sans FB", 0, 17)); // NOI18N
         txtDisplay.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
@@ -595,6 +605,10 @@ public class Calculadora extends javax.swing.JFrame {
         }
         txtDisplay.setText(String.valueOf(aux));
     }//GEN-LAST:event_jButtonFactorialActionPerformed
+
+    private void formWindowIconified(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowIconified
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowIconified
 
     /**
      * @param args the command line arguments
