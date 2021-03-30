@@ -9,6 +9,15 @@ package javaCalculator;
  *
  * @author Vilardo
  */
-public class PorCiento {
+public class PorCiento implements Operacion{
+    private double unNumero;
     
+    public PorCiento(Double primerNum) {
+	this.unNumero = primerNum;
+    }
+	
+    public double realizarOperacion(double otroNumero) {
+	unNumero = unNumero * (otroNumero / 100);
+	return unNumero;
+    }
 }

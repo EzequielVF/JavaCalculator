@@ -9,6 +9,15 @@ package javaCalculator;
  *
  * @author Vilardo
  */
-public class Multiplicar {
+public class Multiplicar implements Operacion{
+    private double unNumero;
     
+    public Multiplicar(Double primerNum) {
+	this.unNumero = primerNum;
+    }
+	
+    public double realizarOperacion(double otroNumero) {
+	unNumero = unNumero * otroNumero;
+	return unNumero;
+    }
 }

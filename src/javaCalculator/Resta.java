@@ -9,6 +9,16 @@ package javaCalculator;
  *
  * @author Vilardo
  */
-public class Resta {
+public class Resta implements Operacion{
+    private double unNumero;
+    
+    public Resta(Double primerNum) {
+	this.unNumero = primerNum;
+    }
+	
+    public double realizarOperacion(double otroNumero) {
+	unNumero = unNumero - otroNumero;
+	return unNumero;
+    }
     
 }

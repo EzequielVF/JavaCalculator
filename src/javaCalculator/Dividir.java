@@ -9,6 +9,15 @@ package javaCalculator;
  *
  * @author Vilardo
  */
-public class Dividir {
+public class Dividir implements Operacion{
+    private double unNumero;
     
+    public Dividir(Double primerNum) {
+	this.unNumero = primerNum;
+    }
+	
+    public double realizarOperacion(double otroNumero) {
+	unNumero = unNumero / otroNumero;
+	return unNumero;
+    }
 }
